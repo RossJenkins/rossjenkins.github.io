@@ -48,7 +48,7 @@ export default function Nav() {
     <nav aria-label="Main" className="sticky top-0 z-20 border-b border-line bg-paper px-4 sm:px-6">
       <div className={`flex h-14 items-center justify-between border-x border-line px-4 sm:px-6 ${container}`}>
         <a href="#" className="font-mono text-base font-semibold">
-          <span className="text-accent">~/</span>ross-jenkins
+          <span className="text-accent">~/</span>jenkins
         </a>
         <div className="flex items-center gap-4">
           <ul className="hidden items-center gap-6 text-base md:flex">
