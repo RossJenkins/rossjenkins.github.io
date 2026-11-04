@@ -84,6 +84,13 @@ export const experience: Role[] = [
     dates: 'Jul 2019 – Jan 2020',
     highlights: [],
   },
+  {
+    title: 'Intern Software Engineer',
+    company: 'JPMorgan Chase & Co.',
+    companyUrl: 'https://www.jpmorganchase.com',
+    dates: 'Jun 2018 – Aug 2018',
+    highlights: [],
+  },
 ]
 
 // Rendered as a TypeScript discriminated union. `kind` is the discriminant; `type` is the
