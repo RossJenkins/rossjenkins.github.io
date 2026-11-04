@@ -110,7 +110,7 @@ export const skills: { kind: string; type: string; items: string[] }[] = [
 export const education = {
   degree: 'BSc (Hons) Computer Science',
   school: 'The University of Edinburgh',
-  dates: '2015 – 2019',
+  dates: 'Sept 2015 – July 2019',
   // Set `url` to link your dissertation; until then the title shows as plain text.
   dissertation: { title: 'Tackling Algorithmic Bias', url: '' },
 }

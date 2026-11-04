@@ -60,30 +60,32 @@ export default function Nav() {
               </li>
             ))}
           </ul>
-          <div className="hidden md:block">
-            <ThemeToggle theme={theme} setTheme={setTheme} />
-          </div>
-          <button
-            ref={buttonRef}
-            type="button"
-            aria-expanded={open}
-            aria-controls="mobile-menu"
-            aria-label={open ? 'Close menu' : 'Open menu'}
-            onClick={() => setOpen(!open)}
-            className="-mr-2 grid size-10 place-items-center rounded-md hover:bg-band md:hidden"
-          >
-            <svg viewBox="0 0 24 24" className="size-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
-              {/* Each bar rotates/fades so the icon morphs between ☰ and ✕. */}
-              <g className="transition-transform duration-300 motion-reduce:transition-none [transform-box:view-box] [transform-origin:center]" style={{ transform: open ? 'rotate(45deg) translateY(5px)' : 'none' }}>
-                <path d="M4 7h16" />
-              </g>
-              <path d="M4 12h16" className={`transition-opacity duration-200 motion-reduce:transition-none ${open ? 'opacity-0' : ''}`} />
-              <g className="transition-transform duration-300 motion-reduce:transition-none [transform-box:view-box] [transform-origin:center]" style={{ transform: open ? 'rotate(-45deg) translateY(-5px)' : 'none' }}>
-                <path d="M4 17h16" />
-              </g>
-            </svg>
-          </button>
         </div>
+        <div>
+            <div className="hidden md:block">
+              <ThemeToggle theme={theme} setTheme={setTheme} />
+            </div>
+            <button
+              ref={buttonRef}
+              type="button"
+              aria-expanded={open}
+              aria-controls="mobile-menu"
+              aria-label={open ? 'Close menu' : 'Open menu'}
+              onClick={() => setOpen(!open)}
+              className="-mr-2 grid size-10 place-items-center rounded-md hover:bg-band md:hidden"
+            >
+              <svg viewBox="0 0 24 24" className="size-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+                {/* Each bar rotates/fades so the icon morphs between ☰ and ✕. */}
+                <g className="transition-transform duration-300 motion-reduce:transition-none [transform-box:view-box] [transform-origin:center]" style={{ transform: open ? 'rotate(45deg) translateY(5px)' : 'none' }}>
+                  <path d="M4 7h16" />
+                </g>
+                <path d="M4 12h16" className={`transition-opacity duration-200 motion-reduce:transition-none ${open ? 'opacity-0' : ''}`} />
+                <g className="transition-transform duration-300 motion-reduce:transition-none [transform-box:view-box] [transform-origin:center]" style={{ transform: open ? 'rotate(-45deg) translateY(-5px)' : 'none' }}>
+                  <path d="M4 17h16" />
+                </g>
+              </svg>
+            </button>
+          </div>
       </div>
 
       {/* Always mounted so it can animate out; `inert` keeps it out of the tab order and a11y tree when closed. */}

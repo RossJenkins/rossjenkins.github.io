@@ -85,7 +85,7 @@ export default function App() {
                 <h3 className="text-xl font-semibold">{role.title}</h3>
                 <p className="flex flex-wrap items-baseline gap-x-4 text-base text-muted">
                   {role.companyUrl ? (
-                    <a href={role.companyUrl} className={linkClass}>
+                    <a href={role.companyUrl} rel="noopener noreferrer" target="_blank" className={linkClass}>
                       {role.company}
                     </a>
                   ) : (
@@ -104,7 +104,7 @@ export default function App() {
                   <ul className="mt-3 flex flex-wrap gap-x-6 text-base">
                     {role.links.map((l) => (
                       <li key={l.href}>
-                        <a href={l.href} className={linkClass}>
+                        <a href={l.href} rel="noopener noreferrer" target="_blank" className={linkClass}>
                           {l.label}
                         </a>
                       </li>
@@ -154,7 +154,7 @@ export default function App() {
               <ul aria-label="Find me online" className="flex flex-wrap gap-x-8 gap-y-2">
                 {links.map((l) => (
                   <li key={l.href}>
-                    <a href={l.href} className={linkClass}>
+                    <a href={l.href} rel="noopener noreferrer" target="_blank" className={linkClass}>
                       {l.label}
                     </a>
                   </li>
