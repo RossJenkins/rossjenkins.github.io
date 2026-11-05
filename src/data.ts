@@ -83,14 +83,14 @@ export const experience = [
     company: 'AquaQ Analytics',
     companyUrl: 'https://dataintellect.com',
     dates: 'Jul 2019 – Jan 2020',
-    highlights: ['Learnt the ropes of React and Redux, gained Java certification, helped an investment banking client automate KYC rule compliance against their client base.'],
+    highlights: ['Learnt the ropes of React and Redux, gained Java certification, helped an investment banking client automate KYC rule compliance checks for their client base.'],
   },
   {
     title: 'Intern Software Engineer',
     company: 'JPMorgan Chase & Co.',
     companyUrl: 'https://www.jpmorganchase.com',
     dates: 'Jun 2018 – Aug 2018',
-    highlights: ['Introduced to the software development lifecycle of a large-scale, international team whilst migrating a Corporate Actions lifecycle management service from an on-prem mainframe to a private-cloud based database.'],
+    highlights: ['Introduced to the software development lifecycle of a large-scale, international team whilst contributing to migrating a service from an on-prem mainframe to a private-cloud based database.'],
   },
 ] as const satisfies Role[];
 
