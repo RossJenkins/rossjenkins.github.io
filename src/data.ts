@@ -113,7 +113,7 @@ export const education = {
   schoolUrl: 'https://www.ed.ac.uk',
   dates: 'Sept 2015 – July 2019',
   // Set `url` to link your dissertation; until then the title shows as plain text.
-  dissertation: { title: 'Tackling Algorithmic Bias', url: '' },
+  dissertation: { title: 'Tackling Algorithmic Bias', url: 'honours-project.pdf' },
 }
 
 export const links: Link[] = [

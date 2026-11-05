@@ -136,7 +136,7 @@ export default function App() {
             <p className="mt-3">
               Dissertation:{' '}
               {education.dissertation.url ? (
-                <a href={education.dissertation.url} className={linkClass}>
+                <a href={`${import.meta.env.BASE_URL}${education.dissertation.url}`} target="_blank" className={linkClass}>
                   {education.dissertation.title}
                 </a>
               ) : (
