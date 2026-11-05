@@ -14,7 +14,7 @@ export type Role = {
 
 export const profile = {
   name: 'Ross Jenkins',
-  greeting: 'Hi, Im Ross 👋',
+  greeting: 'Hi, I\'m Ross 👋',
   // Filename of a square photo in /public. Set to '' to show the placeholder instead.
   avatar: 'me.jpg',
   role: 'Design system engineer, based in Belfast',
@@ -90,7 +90,7 @@ export const experience = [
     company: 'JPMorgan Chase & Co.',
     companyUrl: 'https://www.jpmorganchase.com',
     dates: 'Jun 2018 – Aug 2018',
-    highlights: ['Introduced to the software development lifecycle of a large-scale, international team whilst contributing to migrating a service from an on-prem mainframe to a private-cloud based database.'],
+    highlights: ['Introduced to the software development lifecycle of a large-scale organisation, contributing to migrating a service from an on-premise mainframe to JPMC\'s private-cloud.'],
   },
 ] as const satisfies Role[];
 
