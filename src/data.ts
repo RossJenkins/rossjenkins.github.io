@@ -14,20 +14,20 @@ export type Role = {
 
 export const profile = {
   name: 'Ross Jenkins',
-  greeting: 'Hi, I’m Ross 👋',
+  greeting: 'Hi, Im Ross 👋',
   // Filename of a square photo in /public. Set to '' to show the placeholder instead.
   avatar: 'me.jpg',
-  role: 'Design engineer in Belfast',
+  role: 'Design system engineer, based in Belfast',
   summary:
-    'I’m an engineer with 7+ years of product and design system experience who loves to work end to end. I can shape a UX alongside PM and design, build it, get it in front of users, and iterate. I care about visual craft, accessibility, and building components that help others ship consistent, polished interfaces.',
-}
+    'I\'m an engineer with 7+ years of product and design system experience who loves to work end to end. I can collaborate to shape a UX, build it, ship it and iterate. I care about visual craft, accessibility, and building components that help my teammates ship consistent, polished interfaces.',
+};
 
 // Add paragraphs (hobbies, interests) here later.
-export const about: string[] = [
-  'I’m a design engineer based in Belfast. There’s more to come here about what I get up to outside of work.',
-]
+export const about = [
+  'I\'m a design engineer based in Belfast. There\'s more to come here about what I get up to outside of work.',
+];
 
-export const experience: Role[] = [
+export const experience = [
   {
     title: 'Lead Design System Engineer',
     company: 'Whitespace',
@@ -48,7 +48,7 @@ export const experience: Role[] = [
     highlights: [
       'Led a team of 5 engineers, working with product and engineering management to set our roadmap and deliver workflow improvements for large, strategic customers, including Gitflow support in Pipelines.',
       'Turned user feedback into a Markdown editor for deployment steps in Pipelines, built from design system primitives, then iterated with in-editor help and native file uploads.',
-      'Developed the React component library implementing Gearset’s design system, adopted across an ~90 person engineering organisation.',
+      'Developed the React component library implementing Gearset\'s design system, adopted across an ~90 person engineering organisation.',
       'Migrated Gearset from a legacy client-side router to React Router v7 across ~200 application routes.',
       'Scaled the team through the internship programme and coaching: 3 promotions and 9 interns hired, several returning as graduates.',
       'Represented Gearset at Dreamforce, talking to existing and prospective customers.',
@@ -72,26 +72,27 @@ export const experience: Role[] = [
     companyUrl: 'https://instil.co',
     dates: 'Jan 2020 – Aug 2022',
     highlights: [
-      'Implemented the design system for a client’s car insurance platform and built its quotation flow, with a clear, accessible information architecture across a multi-stage form.',
+      'Implemented the design system for a client\'s car insurance platform and built its quotation flow, with a clear, accessible information architecture across a multi-stage form.',
       'Added Apple Pay and Google Pay to the checkout flow for a modern experience across web and mobile.',
+      'Contributed several articles to Instil\'s blog, including guides to React Hooks and to the const assertion in TypeScript.'
     ],
-    links: [{ label: 'Blog: const assertions for fun and profit', href: 'https://instil.co/blog/using-typescript-const-assertions-for-fun-and-profit' }],
+    links: [{ label: 'Using const assertions for fun and profit', href: 'https://instil.co/blog/using-typescript-const-assertions-for-fun-and-profit' }],
   },
   {
     title: 'Graduate Software Engineer',
     company: 'AquaQ Analytics',
     companyUrl: 'https://dataintellect.com',
     dates: 'Jul 2019 – Jan 2020',
-    highlights: [],
+    highlights: ['Learnt the ropes of React and Redux, gained Java certification, helped an investment banking client automate KYC rule compliance against their client base.'],
   },
   {
     title: 'Intern Software Engineer',
     company: 'JPMorgan Chase & Co.',
     companyUrl: 'https://www.jpmorganchase.com',
     dates: 'Jun 2018 – Aug 2018',
-    highlights: [],
+    highlights: ['Introduced to the software development lifecycle of a large-scale, international team whilst migrating a Corporate Actions lifecycle management service from an on-prem mainframe to a private-cloud based database.'],
   },
-]
+] as const satisfies Role[];
 
 // Rendered as a TypeScript discriminated union. `kind` is the discriminant; `type` is the
 // interface name shown in the code block. Rule of thumb: frontend/backend are what ships in the
@@ -105,18 +106,23 @@ export const skills: { kind: string; type: string; items: string[] }[] = [
   { kind: 'backend', type: 'Backend', items: ['C#', '.NET', 'Node.js', 'GraphQL', 'PostgreSQL', 'AWS'] },
   { kind: 'testing', type: 'Testing', items: ['Vitest', 'Jest', 'React Testing Library', 'Playwright', 'Cypress'] },
   { kind: 'tooling', type: 'Tooling', items: ['Storybook', 'Figma', 'Claude Code', 'Docker', 'Webpack'] },
-]
+];
 
 export const education = {
   degree: 'BSc (Hons) Computer Science',
   school: 'The University of Edinburgh',
   schoolUrl: 'https://www.ed.ac.uk',
   dates: 'Sept 2015 – July 2019',
+  highlights: [
+    'Completed courses on a range of Computer Science fundamentals, from algorithms and data structures to computer security and database design.',
+    'Got my first taste of building out a UI during a 3rd Year project to build a location-based game on Android called Songle, where you would walk around campus picking up lyrics of a song to guess the title of.',
+    'Achieved a first in my final-year dissertation, where I discussed algorithmic bias and methods for mitigating it.'
+  ],
   // Set `url` to link your dissertation; until then the title shows as plain text.
   dissertation: { title: 'Tackling Algorithmic Bias', url: 'honours-project.pdf' },
-}
+};
 
-export const links: Link[] = [
+export const links = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/rossjenkinsdev/' },
   { label: 'GitHub', href: 'https://github.com/rossjenkins' },
-]
+] as const satisfies Link[];

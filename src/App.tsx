@@ -132,9 +132,16 @@ export default function App() {
             )}
             <span className="font-mono text-sm">{education.dates}</span>
           </p>
+          {education.highlights.length > 0 && (
+            <ul className="mt-3 max-w-[62ch] list-disc space-y-2 pl-5 marker:text-accent">
+              {education.highlights.map((h) => (
+                <li key={h}>{h}</li>
+              ))}
+            </ul>
+          )}
           {education.dissertation && (
             <p className="mt-3">
-              Dissertation:{' '}
+              Here's a link to my dissertation
               {education.dissertation.url ? (
                 <a href={`${import.meta.env.BASE_URL}${education.dissertation.url}`} target="_blank" className={linkClass}>
                   {education.dissertation.title}
