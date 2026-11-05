@@ -123,7 +123,13 @@ export default function App() {
         <Section id="education" index={4} title="Education">
           <h3 className="text-xl font-semibold">{education.degree}</h3>
           <p className="flex flex-wrap items-baseline gap-x-4 text-base text-muted">
-            <span>{education.school}</span>
+            {education.schoolUrl ? (
+              <a href={education.schoolUrl} rel="noopener noreferrer" target="_blank" className={linkClass}>
+                {education.school}
+              </a>
+            ) : (
+              <span>{education.school}</span>
+            )}
             <span className="font-mono text-sm">{education.dates}</span>
           </p>
           {education.dissertation && (

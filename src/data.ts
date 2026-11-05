@@ -103,13 +103,14 @@ export const skills: { kind: string; type: string; items: string[] }[] = [
     items: ['TypeScript', 'React', 'Next.js', 'React Router', 'Redux Toolkit', 'Radix UI', 'Tailwind CSS', 'CSS Modules', 'SCSS'],
   },
   { kind: 'backend', type: 'Backend', items: ['C#', '.NET', 'Node.js', 'GraphQL', 'PostgreSQL', 'AWS'] },
-  { kind: 'testing', type: 'Testing', items: ['Vitest', 'Jest', 'Playwright', 'Cypress'] },
+  { kind: 'testing', type: 'Testing', items: ['Vitest', 'Jest', 'React Testing Library', 'Playwright', 'Cypress'] },
   { kind: 'tooling', type: 'Tooling', items: ['Storybook', 'Figma', 'Claude Code', 'Docker', 'Webpack'] },
 ]
 
 export const education = {
   degree: 'BSc (Hons) Computer Science',
   school: 'The University of Edinburgh',
+  schoolUrl: 'https://www.ed.ac.uk',
   dates: 'Sept 2015 – July 2019',
   // Set `url` to link your dissertation; until then the title shows as plain text.
   dissertation: { title: 'Tackling Algorithmic Bias', url: '' },
