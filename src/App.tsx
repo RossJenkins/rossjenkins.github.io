@@ -15,6 +15,7 @@ function Section({
   index,
   title,
   revealChildren = true,
+  last = false,
   children,
 }: {
   id: string
@@ -22,10 +23,15 @@ function Section({
   title: string
   /** Set false when the content animates itself (e.g. per item), to avoid a double reveal. */
   revealChildren?: boolean
+  /** The band directly above the footer: no crosshairs, as they don't read well against the dark footer. */
+  last?: boolean
   children: ReactNode
 }) {
   return (
-    <Frame className={index % 2 === 1 ? 'bg-section-odd' : 'bg-section-even'}>
+    <Frame
+      className={index % 2 === 1 ? 'bg-section-odd' : 'bg-section-even'}
+      corners={!last}
+    >
       <section aria-labelledby={id} className={`grid ${columns}`}>
         <div className="border-b border-line px-6 py-5 md:border-r md:border-b-0 md:py-16">
           {/* The reveal wrapper is the sticky element, so the heading still pins while scrolling. */}
@@ -120,7 +126,7 @@ export default function App() {
           <SkillsBlock />
         </Section>
 
-        <Section id="education" index={4} title="Education">
+        <Section id="education" index={4} title="Education" last>
           <h3 className="text-xl font-semibold">{education.degree}</h3>
           <p className="flex flex-wrap items-baseline gap-x-4 text-base text-muted">
             {education.schoolUrl ? (

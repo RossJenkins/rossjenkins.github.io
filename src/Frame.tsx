@@ -24,22 +24,25 @@ function Corner({ side }: { side: 'left' | 'right' }) {
 /**
  * A full-bleed band with a bottom rule, and a centred column framed by vertical rails.
  * Small crosshairs mark where the rails meet the rule. Pass `bottomRule={false}` for the
- * last band on the page, which has no rule (and so no crosshairs) beneath it.
+ * last band on the page, which has no rule (and so no crosshairs) beneath it, and
+ * `corners={false}` to keep the rule but drop the crosshairs.
  */
 export default function Frame({
   className = '',
   bottomRule = true,
+  corners = true,
   children,
 }: {
   className?: string
   bottomRule?: boolean
+  corners?: boolean
   children: ReactNode
 }) {
   return (
     <div className={`px-4 sm:px-6 ${bottomRule ? 'border-b border-line' : ''} ${className}`}>
       <div className={`relative border-x border-line ${container}`}>
         {children}
-        {bottomRule && (
+        {bottomRule && corners && (
           <>
             <Corner side="left" />
             <Corner side="right" />
