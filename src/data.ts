@@ -24,7 +24,7 @@ export const profile = {
 
 // Add paragraphs (hobbies, interests) here later.
 export const about = [
-  'I\'m a design engineer based in Belfast. There\'s more to come here about what I get up to outside of work.',
+  'I\'m a design system engineer based in Belfast. There\'s more to come here about what I get up to outside of work.',
 ];
 
 export const experience = [
@@ -35,9 +35,8 @@ export const experience = [
     dates: 'Sept 2026 – Present',
     current: true,
     highlights: [
-      'Took ownership of the frontend monorepo and cut build times from ~30 mins to ~10, while adding automated accessibility and visual regression testing.',
-      'Lead the React component library and a themed Storybook that engineers and non-technical stakeholders use to browse components and common patterns.',
-      'Prototyping a token, governance and agentic development toolchain, using W3C Design Tokens and Style Dictionary to keep design and code in sync and prevent drift.',
+      'Building out Whitespace\'s design system implementation for its Collective platform, including toolchains for token management and agentic development. Enabling product engineers, solutions engineers and customers to build applications on the platform that are consistent and accessible.',
+      'Took ownership of the frontend monorepo and cut build times from ~30 mins to ~10 mins, while adding automated accessibility and visual regression testing.',
     ],
   },
   {
@@ -83,14 +82,17 @@ export const experience = [
     company: 'AquaQ Analytics',
     companyUrl: 'https://dataintellect.com',
     dates: 'Jul 2019 – Jan 2020',
-    highlights: ['Learnt the ropes of React and Redux, gained Java certification, helped an investment banking client automate KYC rule compliance checks for their client base.'],
+    highlights: [
+      'Learnt the ropes of React and Redux, and gained Java certification.', 
+      'Automated KYC rule compliance checks for an investment banking client.'
+    ],
   },
   {
     title: 'Intern Software Engineer',
     company: 'JPMorgan Chase & Co.',
     companyUrl: 'https://www.jpmorganchase.com',
     dates: 'Jun 2018 – Aug 2018',
-    highlights: ['Introduced to the software development lifecycle of a large-scale organisation, contributing to migrating a service from an on-premise mainframe to JPMC\'s private-cloud.'],
+    highlights: ['Introduced to the software development lifecycle of a large-scale organisation, contrinuted to a migration from an on-premise mainframe to JPMC\'s private-cloud.'],
   },
 ] as const satisfies Role[];
 
@@ -101,11 +103,11 @@ export const skills: { kind: string; type: string; items: string[] }[] = [
   {
     kind: 'frontend',
     type: 'Frontend',
-    items: ['TypeScript', 'React', 'Next.js', 'React Router', 'Redux Toolkit', 'Radix UI', 'Tailwind CSS', 'CSS Modules', 'SCSS'],
+    items: ['TypeScript', 'React', 'Vue', 'Next.js', 'React Router', 'Redux Toolkit', 'Radix UI', 'Tailwind CSS', 'CSS Modules', 'SCSS'],
   },
   { kind: 'backend', type: 'Backend', items: ['C#', '.NET', 'Node.js', 'GraphQL', 'PostgreSQL', 'AWS'] },
   { kind: 'testing', type: 'Testing', items: ['Vitest', 'Jest', 'React Testing Library', 'Playwright', 'Cypress'] },
-  { kind: 'tooling', type: 'Tooling', items: ['Storybook', 'Figma', 'Claude Code', 'Docker', 'Webpack'] },
+  { kind: 'tooling', type: 'Tooling', items: ['Storybook', 'Terrazzo', 'Figma', 'Claude Code', 'Docker', 'Webpack', 'Vite'] },
 ];
 
 export const education = {

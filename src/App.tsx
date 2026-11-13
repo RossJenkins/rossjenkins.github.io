@@ -147,7 +147,7 @@ export default function App() {
           )}
           {education.dissertation && (
             <p className="mt-3">
-              Here's a link to my dissertation
+              Here's a link to my dissertation&nbsp;
               {education.dissertation.url ? (
                 <a href={`${import.meta.env.BASE_URL}${education.dissertation.url}`} target="_blank" className={linkClass}>
                   {education.dissertation.title}
@@ -179,7 +179,7 @@ export default function App() {
                   </li>
                 ))}
               </ul>
-              <p className="font-mono text-sm text-muted">Built with love, in Belfast 🏗️</p>
+              <p className="font-mono text-sm text-muted">Built using React, Vite & TailwindCSS</p>
             </div>
           </div>
         </Frame>
